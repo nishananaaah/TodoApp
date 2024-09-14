@@ -1,17 +1,23 @@
-import React from "react";
-import Addtask from "./Addtask";
-import Listtask from "./Listtask";
+import React, { createContext, useState } from 'react'
+import Button from './Button';
+import Counter from './Counter';
+import Div from './Div';
 
+
+const usercontext=createContext();
 const Todo = () => {
+  const [count,setCount]=useState(0)
   return (
     <div>
-      <div>TODO APP</div>
-      <div>
-        <Addtask />
-      </div>
-      <div><Listtask/></div>
-    </div>
-  );
-};
+      <usercontext.Provider value={{count,setCount}}>
+        <Button/>
+        <Counter/>
+        <Div/>
+      </usercontext.Provider>
 
-export default Todo;
+      
+    </div>
+  )
+}
+
+export default Todo

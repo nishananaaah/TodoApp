@@ -1,28 +1,25 @@
-import { createContext,useState } from 'react'
+
+import React, { useState } from 'react'
 import './App.css'
+import Header from './REACT REDUX/Header'
+import Main from './REACT REDUX/Main'
+import Footer from './REACT REDUX/Footer'
 
 
-import Button from './TodoApp/Button'
-import Counter from './TodoApp/Counter'
-import Div from './TodoApp/Div'
-import Todo from './TodoApp/Todo'
-import Context from './TodoApp/Context'
-// const usercontext=createContext();
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count,setCount]=useState(0);
+  const [color, setColor] = useState("red");
+  
 
   return (
     <>
       <div>
       
-      {/* <usercontext.Provider value={{count,setCount}}>
-        <Button/>
-        <Counter/>
-        <Div/>
-      </usercontext.Provider> */}
-      <Todo/>
-      <Context/>
+    <Header count={count} color={color}/>
+    <Main count={count} setCount={setCount} color={color} setColor={setColor}/>
+    <Footer color={color} count={count}/>
+    
 
       </div>
      

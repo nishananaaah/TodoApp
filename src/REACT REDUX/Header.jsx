@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Header = ({count,color}) => {
+const Header = () => {
   return (
     <div>
-      <h1 style={{color}}>REDUX Project</h1>
-      <h2>The counter is - {count}</h2>
+      <h1>REDUX Project</h1>
+      
     </div>
   )
 }

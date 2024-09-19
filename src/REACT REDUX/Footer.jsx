@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Footer = ({color,count}) => {
+const Footer = () => {
   return (
     <div>
-        <h4>My count is - {count}</h4>
-      <h4 style={{color}}>My redux project footer</h4>
+       
+      <h4>My redux project footer</h4>
     </div>
   )
 }

@@ -2,11 +2,11 @@ import React from 'react'
 import Counter from './Counter'
 import Aside from './Aside'
 
-const Main = ({count,setCount,color,setColor}) => {
+const Main = () => {
   return (
     <div>
-      <Counter count={count} setCount={setCount}/>
-      <Aside color={color} setColor={setColor}/>
+      <Counter />
+      <Aside />
     </div>
   )
 }
